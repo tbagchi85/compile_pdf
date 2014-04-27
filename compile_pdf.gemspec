@@ -22,8 +22,8 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "yomu", "~> 0.1.9"
-  spec.add_dependency "prawn", "~> 1.0.0.rc2"
+  spec.add_dependency "yomu", "0.1.9"
+  spec.add_dependency "prawn", "1.0.0.rc2"
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency 'rake', '~> 10.1', '>= 10.1.0'
 end

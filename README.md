@@ -41,7 +41,9 @@ Open Rails console:-
    file_array:  Take the required files which you want to convert into a pdf
 
    attachment_object_name: If you are using PaperClip as File uploader module
-   has_attached_file :attachment
+
+     has_attached_file :attachment
+
    Then your attachment_object_name will be "attachment"
 
    file_name: Default will be Time.now or else you can specify your own PDF name.
@@ -49,16 +51,17 @@ Open Rails console:-
 
   For Example:--
 
-   file_array = File.all
+     file_array = File.all
 
    In your File model if
-   has_attached_file :attachment
+
+     has_attached_file :attachment
 
    attachment_object_name = "attachment"
 
    file_name = "my_attachment"
 
-   compile_pdf_module(file_array, attachment_object_name, file_name)
+     compile_pdf_module(file_array, attachment_object_name, file_name)
 
  Default file location will be Your Project root folder "tmp/" folder
 
