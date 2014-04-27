@@ -23,7 +23,7 @@ Or install it yourself as:
 
 ## Usage
 
-Currently this is only supported with following format files:-
+Currently this is only supported with following format files:--
 
 1. Image Files(Eg. .PNG, .JPG, .JPEG etc.)
 2. PDF files(Eg. .pdf)
