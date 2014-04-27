@@ -2,9 +2,9 @@
 
 If you have multiple format files like Image files(Eg. .png, .jpg, .jpeg etc.), Document files(Eg. .doc, .docx, text etc.)
 
-or PDF files and now you want to make a single PDF with all format of files, this gem will help you to compile multiple
+or PDF files and now you want to make a single PDF with all format of files,
 
-format files into single pdf.
+this gem will help you to compile multiple format files into single pdf.
 
 
 ## Installation
