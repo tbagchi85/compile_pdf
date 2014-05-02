@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Compile pdf by tbagchi85</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Compile pdf</h1>
+        <p>If you have multiple format files like Image files(Eg. .png, .jpg, .jpeg ), Document files(Eg. .doc, .docx, text )  or PDF files and now you want to make a single PDF with all format of files, this gem will help you to compile multiple  format files into single pdf.</p>
+
+        <p class="view"><a href="https://github.com/tbagchi85/compile_pdf">View the Project on GitHub <small>tbagchi85/compile_pdf</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/tbagchi85/compile_pdf/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/tbagchi85/compile_pdf/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/tbagchi85/compile_pdf">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="compile-pdf" class="anchor" href="#compile-pdf"><span class="octicon octicon-link"></span></a>Compile Pdf</h1>
+
+<p>If you have multiple format files like Image files(Eg. .png, .jpg, .jpeg etc.), Document files(Eg. .doc, .docx, text etc.)</p>
+
+<p>or PDF files and now you want to make a single PDF with all format of files,</p>
+
+<p>this gem will help you to compile multiple format files into single pdf.</p>
+
+<h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Add this line to your application's Gemfile:</p>
+
+<pre><code>gem 'compile_pdf'
+</code></pre>
+
+<p>And then execute:</p>
+
+<pre><code>$ bundle
+</code></pre>
+
+<p>Or install it yourself as:</p>
+
+<pre><code>$ gem install compile_pdf
+</code></pre>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>Currently this is only supported with following format files:--</p>
+
+<ol>
+<li>Image Files(Eg. .PNG, .JPG, .JPEG etc.)</li>
+<li>PDF files(Eg. .pdf)</li>
+<li>Text and Note files(Eg. .txt etc. )</li>
+<li>Document files(Eg. .docx, .doc etc.)</li>
+</ol><p>Open Rails console:-</p>
+
+<blockquote>
+<p>require 'compile_pdf'</p>
+
+<p>extend CompilePdf</p>
+
+<p>compile_pdf_module(file_array, attachment_object_name, file_name = nil)</p>
+</blockquote>
+
+<p>file_array:  Take the required files which you want to convert into a pdf</p>
+
+<p>attachment_object_name: If you are using PaperClip as File uploader module</p>
+
+<pre><code> has_attached_file :attachment
+</code></pre>
+
+<p>Then your attachment_object_name will be "attachment"</p>
+
+<p>file_name: Default will be Time.now or else you can specify your own PDF name.</p>
+
+<p>For Example:--</p>
+
+<pre><code> file_array = File.all
+</code></pre>
+
+<p>In your File model if</p>
+
+<pre><code> has_attached_file :attachment
+</code></pre>
+
+<p>attachment_object_name = "attachment"</p>
+
+<p>file_name = "my_attachment"</p>
+
+<pre><code> compile_pdf_module(file_array, attachment_object_name, file_name)
+</code></pre>
+
+<p>Default file location will be Your Project root folder "tmp/" folder</p>
+
+<p>I have tested with PaperClip and Aws S3 and its working fine.</p>
+
+<p>Soon I will release for "Dragonfly", "attachment_fu" and "CarrierWave" attachment gem.</p>
+
+<h2>
+<a name="dependency" class="anchor" href="#dependency"><span class="octicon octicon-link"></span></a>Dependency</h2>
+
+<p>This gem is highly dependent on :-</p>
+
+<ol>
+<li>gem "yomu", "~&gt; 0.1.9" , :platforms =&gt; :ruby</li>
+<li>
+<p>gem "prawn", "~&gt; 1.0.0.rc2" , :platforms =&gt; :ruby</p>
+
+<p>If you have any other version of Prawn it may conflict with 'Compile Pdf' gem.</p>
+</li>
+</ol><h2>
+<a name="contributing" class="anchor" href="#contributing"><span class="octicon octicon-link"></span></a>Contributing</h2>
+
+<ol>
+<li>Fork it</li>
+<li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
+<li>Commit your changes (<code>git commit -am 'Add some feature'</code>)</li>
+<li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
+<li>Create new Pull Request</li>
+</ol>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/tbagchi85">tbagchi85</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
