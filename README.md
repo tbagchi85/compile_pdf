@@ -1,4 +1,4 @@
-# Compile Pdf
+# Compile Pdf [![Code Climate](https://codeclimate.com/github/tbagchi85/compile_pdf.png)](https://codeclimate.com/github/tbagchi85/compile_pdf)
 
 If you have multiple format files like Image files(Eg. .png, .jpg, .jpeg etc.), Document files(Eg. .doc, .docx, text etc.)
 
